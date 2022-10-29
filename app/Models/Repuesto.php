@@ -32,9 +32,6 @@ class Repuesto extends Model
     
 
     // relacion mucho a mucho
-    // public function marcas(){
-    //     return $this->belongsToMany(Marca::class);
-    // }
     public function proveedor(){
         return $this->belongsToMany(Proveedor::class);
     }
