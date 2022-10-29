@@ -15,7 +15,7 @@
                     <h2 class="text-gray-900 text-center text-2xl font-medium"> Respuesta a la consulta de {{$consulta->name}}</h2>
                 </div>
                 <div class="col-span-8 flex justify-center">
-                    <textarea readonly class="my-2 rounded-lg w-96 mx-10 md:mx-16 lg:mx-20">{{$consulta->response}}</textarea>
+                    <textarea readonly class="my-2 px-4 text-center rounded-lg w-96 mx-10 md:mx-16 lg:mx-20">{{$consulta->response}}</textarea>
                 </div>
             @else
                 <div class="col-span-8 flex justify-center my-4">

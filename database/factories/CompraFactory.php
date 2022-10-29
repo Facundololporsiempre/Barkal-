@@ -40,7 +40,6 @@ class CompraFactory extends Factory
             "headline" => $this->faker->unique()->text(25),
             "validM" => $this->faker->unique()->text(25),
             "validA" => $this->faker->unique()->text(25),
-            // "codeT" => $this->faker->unique()->text(10),
             "codeS" => $this->faker->unique()->text(10),
             "repuestoname" => $this->faker->unique()->text(10),
             "repuestomarca" => $this->faker->unique()->text(10),
@@ -48,7 +47,7 @@ class CompraFactory extends Factory
             "repuestocategoria" => $this->faker->unique()->text(10),
             "cantidad" => $this->faker->unique()->text(10),
             "precio" => $this->faker->unique()->text(10),
-            // 'proveedor_id' => Proveedor::all()->random()->id,
+            'proveedor_id' => Proveedor::all()->random()->id,
         ];
     }
 }

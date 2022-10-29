@@ -223,6 +223,9 @@
                             <div class="flex justify-center mb-10">
                                 {!! Form::number("phone", null, ["class" => "w-72 mx-10 md:w-40 lg:w-72 rounded-full", "placeholder" => "Ingrese su numero telefonico..."]) !!}
                             </div>
+                            <div class="flex justify-center">
+                                <small class="col-span-3 md:col-span-1 relative bottom-10 text-zinc-400 text-center mx-10 flex justify-center">Sin punto ni espacios. Ej. 3794026317</small>
+                            </div>
                             @error('phone')
                                 <small class="col-span-3 md:col-span-1 relative bottom-10 text-red-600 text-center mx-10 flex justify-center">{{$message}}</small>
                             @enderror
@@ -330,6 +333,7 @@
 
                     <hr class="h-1 mx-8 bg-gray-300">
 
+                    <h6 class="text-gray-900 text-center text-xl leading-4 font-bold py-6 mx-10 mt-10 md:mt-4 lg:mt-0">TU PEDIDO</h6>
                     <div class="grid grid-cols-7 mx-8 my-10">
                         <div class="flex justify-center items-center col-span-7 md:col-span-2 lg:col-span-1">
                             {{-- <img class="w-36 h-32 bg-red-500 table__productos" src="#" alt=""> --}}
@@ -348,29 +352,32 @@
                             <input type="text" value="{{$repuesto->modelo->name}}" readonly class="bg-zinc-100 w-56 md:w-96 text-gray-900 text-lg leading-4 font-bold mt-4 md:mt-0 lg:mt-0 hidden inputN" name="repuestomodelo">
                             <input type="text" value="{{$repuesto->categoria->name}}" readonly class="bg-zinc-100 w-56 md:w-96 text-gray-900 text-lg leading-4 font-bold mt-4 md:mt-0 lg:mt-0 hidden inputN" name="repuestocategoria">
                             <div class="bg-blue-100 w-32 rounded-2xl mt-4">
-                                @if ($repuesto->price == "1.000" || $repuesto->price == "2.000" || $repuesto->price == "3.000" || $repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "8.000" || $repuesto->price == "9.000" ||$repuesto->price == "10.000" || $repuesto->price == "11.000" || $repuesto->price == "13.000" || $repuesto->price == "15.000" || $repuesto->price == "16.000" || $repuesto->price == "18.000" || $repuesto->price == "20.000" || $repuesto->price == "21.000")
+                                @if ($repuesto->price == "1.000" || $repuesto->price == "2.000" || $repuesto->price == "3.000" || $repuesto->price == "4.000" || $repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "7.000" || $repuesto->price == "8.000" || $repuesto->price == "9.000" || $repuesto->price == "10.000" || $repuesto->price == "11.000" || $repuesto->price == "13.000" || $repuesto->price == "14.000" || $repuesto->price == "15.000" || $repuesto->price == "16.000" || $repuesto->price == "18.000" || $repuesto->price == "20.000" || $repuesto->price == "21.000" || $repuesto->price == "23.000" || $repuesto->price == "27.000" || $repuesto->price == "29.000" || $repuesto->price == "30.000" || $repuesto->price == "32.000" || $repuesto->price == "34.000" || $repuesto->price == "37.000" || $repuesto->price == "39.000" || $repuesto->price == "46.000" || $repuesto->price == "49.000" || $repuesto->price == "50.000" || $repuesto->price == "51.000" || $repuesto->price == "59.000" || $repuesto->price == "67.000" || $repuesto->price == "68.000" || $repuesto->price == "69.000" || $repuesto->price == "76.000" || $repuesto->price == "82.000" || $repuesto->price == "83.000" || $repuesto->price == "112.000" || $repuesto->price == "115.000" || $repuesto->price == "118.000" || $repuesto->price == "126.000" || $repuesto->price == "143.000" || $repuesto->price == "171.000" || $repuesto->price == "253.000" || $repuesto->price == "272.000")
                                     <p class="text-blue-500 text-center text-sm font-medium leading-4 py-1">Llega mañana</p>
                                 @endif
                             </div>
                         </div>
                         <div class="flex justify-center mb-6 items-center col-span-7 md:col-span-1 lg:col-span-2">
                             <div class="table__cantidad">
-                                <input class="ml-2 w-16 rounded-lg" name="cantidad" id="valor1" type="number" min = "1" max="5" value="1" oninput="calcular()">
+                                <input class="ml-2 w-16 rounded-lg" name="cantidad" id="valor1" type="number" min = "1" max="5" value="1" oninput="calcular()" step="1">
                                 {{-- <button class="text-sm text-white font-bold ml-8 px-4 h-11 bg-red-600 hover:bg-red-500 rounded-lg" class="delete">X</button> --}}
                             </div>
+                            @error('cantidad')
+                                <small class="col-span-2 md:col-span-1 relative bottom-10 text-red-600 text-center mx-10 flex justify-center">{{$message}}</small>
+                            @enderror
                         </div>
                         <div class="flex justify-end items-center mb-6 col-span-7 md:col-span-2 lg:col-span-2">
                             <div>
-                                @if ($repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "8.000" || $repuesto->price == "10.000" || $repuesto->price == "12.000" || $repuesto->price == "13.000" || $repuesto->price == "16.000" ||  $repuesto->price == "18.000" || $repuesto->price == "21.000")
+                                @if ($repuesto->price == "21.000" || $repuesto->price == "22.000" || $repuesto->price == "24.000" || $repuesto->price == "25.000" ||  $repuesto->price == "26.000" || $repuesto->price == "27.000" || $repuesto->price == "28.000" || $repuesto->price == "29.000" || $repuesto->price == "30.000" || $repuesto->price == "33.000" || $repuesto->price == "37.000" || $repuesto->price == "43.000" || $repuesto->price == "45.000" || $repuesto->price == "50.000" || $repuesto->price == "51.000" || $repuesto->price == "54.000" || $repuesto->price == "61.000" || $repuesto->price == "64.000" || $repuesto->price == "67.000")
                                 <p class="text-gray-400 line-through mb-1 ml-16">
                                     @php
-                                        $priceO = $repuesto->price + 2.500;
+                                        $priceO = $repuesto->price + 9.500;
                                         $resta = $priceO;
                                         echo("$" . $resta . "00");
                                     @endphp
                                 </p>
                                 <div class="flex">
-                                    <span class="text-base text-blue-500 mr-2">25%off</span>
+                                    <span class="text-base text-blue-500 mr-2">13%off</span>
                                     <p class="text-gray-900 text-xl leading-4 font-bold">$<b id="precio" value="{{$repuesto->price}}" oninput="calcular()">{{$repuesto->price}}</b></p>
                                     <input class="w-40 rounded-lg hidden" name="precio" id="precio" type="number" value="{{$repuesto->price}}" oninput="calcular()">
                                 </div>

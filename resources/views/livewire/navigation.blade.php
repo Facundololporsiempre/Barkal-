@@ -115,7 +115,7 @@
 
             <a href="/" class="text-zinc-200 hover:bg-zinc-400 hover:text-white block px-3 py-2 rounded-md font-bold">TIENDA</a>
             <a href="{{route("repuestos.repuesto")}}" class="text-zinc-200 hover:bg-zinc-400 hover:text-white block px-3 py-2 rounded-md font-bold">REPUESTOS</a>
-            <a href="{{route("repuestos.contacto")}}" class="text-zinc-200 hover:bg-zinc-400 hover:text-white block px-3 py-2 rounded-md font-bold">CONTACTOS</a>
+            <a href="{{route("repuestos.consulta")}}" class="text-zinc-200 hover:bg-zinc-400 hover:text-white block px-3 py-2 rounded-md font-bold">CONTACTOS</a>
             @auth
             @else
             <a href="{{route("register")}}" class="text-zinc-200 hover:bg-zinc-400 hover:text-white block px-3 py-2 rounded-md font-bold">CREAR CUENTA</a>

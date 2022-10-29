@@ -9,7 +9,7 @@
                 </div>
                 <div class="leading-4 py-4">
                     <p class="text-gray-900 text-center">¡Recibimos tu consulta!</p>
-                    <p class="text-gray-900 text-center">Gracias por comunicarte con nosotros, dentro de unos minutos le contestaremos a la consulta hecha por usted</p>
+                    <p class="text-gray-900 text-center">Gracias por comunicarte con nosotros, en menos de 48hs, un agente de nuestra empresa le respondera a la consulta hecha por usted</p>
                 </div>
                 <div class="bg-blue-700 rounded-3xl mb-8">
                     <a href="{{route("repuestos.consultaP")}}" class="text-white text-center block hover:bg-blue-600 px-3 py-2 rounded-3xl font-bold">Entendido</a>

@@ -86,7 +86,7 @@ class ConsultasController extends Controller
     public function update(Request $request, Consulta $consulta)
     {
         $request->validate([
-            "name" => "required|string|between:5,25",
+            "name" => "required|string|between:5,25|regex:/^[\pL\s\-]+$/u",
             "phone" => "max:10",
             "email" => "required|between:5,40|email:rfc,dns",
             "query" => "required|min:10",
@@ -94,7 +94,7 @@ class ConsultasController extends Controller
         ]);
         $consulta->update($request->all());
         // return redirect()->route("consulta.consultas.index", $consulta)->with("info", "Su respuesta a sido enviado correctamente");
-        return redirect()->route("consulta.consultas.index", $consulta)->with("info", "Su respuesta a sido enviado correctamente");
+        return redirect()->route("consulta.consultas.index", $consulta)->with("info", "Su respuesta a sido enviado con exito");
     }
 
     /**
@@ -106,6 +106,6 @@ class ConsultasController extends Controller
     public function destroy(Consulta $consulta)
     {
         $consulta->delete();
-        return redirect()->route("consulta.consultas.index")->with("info", "La consulta a sido eliminada correctamente");
+        return redirect()->route("consulta.consultas.index")->with("info", "La consulta a sido eliminada con exito");
     }
 }

@@ -45,11 +45,11 @@
                                     {{$repuesto->name}}
                                 </a>
                             </h1>
-                            @if ($repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "8.000" || $repuesto->price == "10.000" || $repuesto->price == "12.000" || $repuesto->price == "13.000" || $repuesto->price == "16.000" ||  $repuesto->price == "18.000" || $repuesto->price == "21.000")
+                            @if ($repuesto->price == "21.000" || $repuesto->price == "22.000" || $repuesto->price == "24.000" || $repuesto->price == "25.000" ||  $repuesto->price == "26.000" || $repuesto->price == "27.000" || $repuesto->price == "28.000" || $repuesto->price == "29.000" || $repuesto->price == "30.000" || $repuesto->price == "33.000" || $repuesto->price == "37.000" || $repuesto->price == "43.000" || $repuesto->price == "45.000" || $repuesto->price == "50.000" || $repuesto->price == "51.000" || $repuesto->price == "54.000" || $repuesto->price == "61.000" || $repuesto->price == "64.000" || $repuesto->price == "67.000")
                                 <p class="text-gray-400 text-sm line-through">
                                     <a href="{{route("repuestos.show", $repuesto)}}">
                                         @php
-                                            $priceO = $repuesto->price + 2.500;
+                                            $priceO = $repuesto->price + 9.500;
                                             $resta = $priceO;
                                             echo("$" . $resta . "00");
                                         @endphp
@@ -59,7 +59,7 @@
                                     <a href="{{route("repuestos.show", $repuesto)}}">
                                         ${{$repuesto->price}}
                                     </a>
-                                    <span class="text-base text-blue-500 ml-2">25%off</span>
+                                    <span class="text-base text-blue-500 ml-2">13%off</span>
                                 </p>
                             @else
                                 <p class="text-gray-900 text-xl leading-4 font-bold">
@@ -69,7 +69,7 @@
                                 </p>
                             @endif
                             <div class="bg-blue-100 w-32 rounded-2xl mt-2">
-                                @if ($repuesto->price == "1.000" || $repuesto->price == "2.000" || $repuesto->price == "3.000" || $repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "8.000" || $repuesto->price == "9.000" || $repuesto->price == "10.000" || $repuesto->price == "11.000" || $repuesto->price == "13.000" || $repuesto->price == "15.000" || $repuesto->price == "16.000" || $repuesto->price == "18.000" || $repuesto->price == "20.000" || $repuesto->price == "21.000")
+                                @if ($repuesto->price == "1.000" || $repuesto->price == "2.000" || $repuesto->price == "3.000" || $repuesto->price == "4.000" || $repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "7.000" || $repuesto->price == "8.000" || $repuesto->price == "9.000" || $repuesto->price == "10.000" || $repuesto->price == "11.000" || $repuesto->price == "13.000" || $repuesto->price == "14.000" || $repuesto->price == "15.000" || $repuesto->price == "16.000" || $repuesto->price == "18.000" || $repuesto->price == "20.000" || $repuesto->price == "21.000" || $repuesto->price == "23.000" || $repuesto->price == "27.000" || $repuesto->price == "29.000" || $repuesto->price == "30.000" || $repuesto->price == "32.000" || $repuesto->price == "34.000" || $repuesto->price == "37.000" || $repuesto->price == "39.000" || $repuesto->price == "46.000" || $repuesto->price == "49.000" || $repuesto->price == "50.000" || $repuesto->price == "51.000" || $repuesto->price == "59.000" || $repuesto->price == "67.000" || $repuesto->price == "68.000" || $repuesto->price == "69.000" || $repuesto->price == "76.000" || $repuesto->price == "82.000" || $repuesto->price == "83.000" || $repuesto->price == "112.000" || $repuesto->price == "115.000" || $repuesto->price == "118.000" || $repuesto->price == "126.000" || $repuesto->price == "143.000" || $repuesto->price == "171.000" || $repuesto->price == "253.000" || $repuesto->price == "272.000")
                                     <p class="text-blue-500 text-center text-sm font-medium leading-4 py-1">Llega mañana</p>
                                 @endif
                             </div>

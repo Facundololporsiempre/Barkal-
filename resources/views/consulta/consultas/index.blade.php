@@ -39,15 +39,15 @@
                                 <a class="btn btn-primary btn-sm" href="{{route("consulta.consultas.edit", $consulta)}}">Ver</a>
                             @endcan
                         </td>
-                        {{-- <td width="10px">
+                        <td width="10px">
                             @can('consulta.consultas.destroy')
-                                <form action="{{route("consulta.consultas.destroy", $consulta)}}" method="post">
+                            <form action="{{route("consulta.consultas.destroy", $consulta)}}" method="post">
                                 @csrf
                                 @method("delete")
                                 <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
-                                </form>
+                            </form>
                             @endcan
-                        </td> --}}
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

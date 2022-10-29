@@ -7,11 +7,11 @@
 @stop
 
 @section('content')
-{{-- @if (session("info"))
+@if (session("info"))
     <div class="alert alert-success">
         <strong>{{session("info")}}</strong>
     </div>
-@endif --}}
+@endif
 @if ($formularios->count())
 <div class="card">
     <div class="card-body">
@@ -34,6 +34,15 @@
                             @can('formulario.formularios.edit')
                                 <a class="btn btn-primary btn-sm" href="{{route("formulario.formularios.edit", $formulario)}}">Ver</a>
                             @endcan
+                            <td width="10px">
+                            @can('formulario.formularios.edit')
+                                <form action="{{route("formulario.formularios.destroy", $formulario)}}" method="post">
+                                    @csrf
+                                    @method("delete")
+                                    <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+                                </form>
+                            @endcan
+                            </td>
                         </td>
                     </tr>
                 @endforeach

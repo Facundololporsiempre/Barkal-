@@ -35,7 +35,6 @@ return new class extends Migration
             $table->string("headline");
             $table->string("validM");
             $table->string("validA");
-            // $table->string("codeT");
             $table->string("codeS");
             $table->string("repuestoname");
             $table->string("repuestomarca");
@@ -44,9 +43,9 @@ return new class extends Migration
             $table->string("cantidad");
             $table->string("precio");
 
-            // $table->unsignedBigInteger("proveedor_id");
+            $table->unsignedBigInteger("proveedor_id");
 
-            // $table->foreign("proveedor_id")->references("id")->on("proveedors")->onDelete("cascade");
+            $table->foreign("proveedor_id")->references("id")->on("proveedors")->onDelete("cascade");
 
             $table->timestamps();
         });

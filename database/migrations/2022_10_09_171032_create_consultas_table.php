@@ -18,14 +18,13 @@ return new class extends Migration
 
             $table->string("name");
             $table->string("response")->nullable();
-            // $table->string("slug");
             $table->string('email');
             $table->string("phone")->nullable();
             $table->longText("query");
 
-            // $table->unsignedBigInteger("proveedor_id");
+            $table->unsignedBigInteger("proveedor_id");
 
-            // $table->foreign("proveedor_id")->references("id")->on("proveedors")->onDelete("cascade");
+            $table->foreign("proveedor_id")->references("id")->on("proveedors")->onDelete("cascade");
 
             $table->timestamps();
         });

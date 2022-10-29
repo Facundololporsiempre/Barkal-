@@ -26,17 +26,17 @@
                         <p class="text-gray-900 text-sm">Categoria: <b>{{$repuesto->categoria->name}}</b></p></p>
                     </div>
                     <div class="mb-2">
-                        @if ($repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "8.000" || $repuesto->price == "10.000" || $repuesto->price == "12.000" || $repuesto->price == "13.000" || $repuesto->price == "16.000" ||  $repuesto->price == "18.000" || $repuesto->price == "21.000")
+                        @if ($repuesto->price == "21.000" || $repuesto->price == "22.000" || $repuesto->price == "24.000" || $repuesto->price == "25.000" ||  $repuesto->price == "26.000" || $repuesto->price == "27.000" || $repuesto->price == "28.000" || $repuesto->price == "29.000" || $repuesto->price == "30.000" || $repuesto->price == "33.000" || $repuesto->price == "37.000" || $repuesto->price == "43.000" || $repuesto->price == "45.000" || $repuesto->price == "50.000" || $repuesto->price == "51.000" || $repuesto->price == "54.000" || $repuesto->price == "61.000" || $repuesto->price == "64.000" || $repuesto->price == "67.000")
                             <p class="text-gray-400 text-sm line-through mb-2">
                                 @php
-                                    $priceO = $repuesto->price + 2.500;
+                                    $priceO = $repuesto->price + 9.500;
                                     $resta = $priceO;
                                     echo("$" . $resta . "00");
                                 @endphp
                             </p>
                             <p class="text-3xl font-bold leading-4 text-gray-900">
                                 ${{$repuesto->price}}
-                                <span class="text-base text-blue-500 ml-2">25%off</span>
+                                <span class="text-base text-blue-500 ml-2">13%off</span>
                             </p>
                         @else
                             <p class="text-gray-900 text-3xl leading-4 font-bold mb-4 precio" id="precio">${{$repuesto->price}}</p>
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="bg-blue-100 w-32 rounded-2xl">
-                        @if ($repuesto->price == "1.000" || $repuesto->price == "2.000" || $repuesto->price == "3.000" || $repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "8.000" || $repuesto->price == "9.000" ||$repuesto->price == "10.000" || $repuesto->price == "11.000" || $repuesto->price == "13.000" || $repuesto->price == "15.000" || $repuesto->price == "16.000" || $repuesto->price == "18.000" || $repuesto->price == "20.000" || $repuesto->price == "21.000")
+                        @if ($repuesto->price == "1.000" || $repuesto->price == "2.000" || $repuesto->price == "3.000" || $repuesto->price == "4.000" || $repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "7.000" || $repuesto->price == "8.000" || $repuesto->price == "9.000" || $repuesto->price == "10.000" || $repuesto->price == "11.000" || $repuesto->price == "13.000" || $repuesto->price == "14.000" || $repuesto->price == "15.000" || $repuesto->price == "16.000" || $repuesto->price == "18.000" || $repuesto->price == "20.000" || $repuesto->price == "21.000" || $repuesto->price == "23.000" || $repuesto->price == "27.000" || $repuesto->price == "29.000" || $repuesto->price == "30.000" || $repuesto->price == "32.000" || $repuesto->price == "34.000" || $repuesto->price == "37.000" || $repuesto->price == "39.000" || $repuesto->price == "46.000" || $repuesto->price == "49.000" || $repuesto->price == "50.000" || $repuesto->price == "51.000" || $repuesto->price == "59.000" || $repuesto->price == "67.000" || $repuesto->price == "68.000" || $repuesto->price == "69.000" || $repuesto->price == "76.000" || $repuesto->price == "82.000" || $repuesto->price == "83.000" || $repuesto->price == "112.000" || $repuesto->price == "115.000" || $repuesto->price == "118.000" || $repuesto->price == "126.000" || $repuesto->price == "143.000" || $repuesto->price == "171.000" || $repuesto->price == "253.000" || $repuesto->price == "272.000")
                             <p class="text-blue-500 text-center text-sm font-medium leading-4 py-1">Llega mañana</p>
                         @endif
                     </div>
@@ -53,10 +53,8 @@
                     </div>
                     <div class="container flex justify-center rounded-3xl lg:mt-4 relative lg:top-24">
                         @if (auth()->user())
-                            {{-- <a href="{{route("repuestos.formulario")}}" class="text-blue-500 w-80 text-center block bg-blue-100 hover:bg-blue-200 px-3 py-2 rounded-3xl font-semibold agregar-carrito">Agregar al carrito</a> --}}
                             <a href="{{route("repuestos.formulario", $repuesto)}}" class="text-white w-80 text-center block bg-blue-700 hover:bg-blue-600 px-3 py-2 rounded-3xl font-bold">COMPRAR</a>
                         @else 
-                            {{-- <a href="{{route("repuestos.restrinsion", $repuesto)}}" class="text-blue-500 w-80 text-center block bg-blue-100 hover:bg-blue-200 px-3 py-2 rounded-3xl font-semibold">Agregar al carrito</a> --}}
                             <a href="{{route("repuestos.restrinsion", $repuesto)}}" class="text-white w-80 text-center block bg-blue-700 hover:bg-blue-600 px-3 py-2 rounded-3xl font-bold">COMPRAR</a>
                         @endif
                     </div>
@@ -71,9 +69,9 @@
                                 <div class="flex justify-center">
                                     <a class="w-48 flex justify-center" href="{{route("repuestos.show", $marcaSimilar)}}">
                                         @if ($marcaSimilar->image)
-                                            <img class="w-48 h-48 object-cover object-center my-4" src="{{Storage::url($marcaSimilar->image->url)}}" alt="">
+                                            <img class="w-48 h-48 object-contain object-center my-4" src="{{Storage::url($marcaSimilar->image->url)}}" alt="">
                                         @else
-                                            <img class="w-48 h-48 object-cover object-center my-4" src="{{URL("vendor\adminlte\dist\img\Afoto-no-disponiblle.jpg")}}" alt="">
+                                            <img class="w-48 h-48 object-contain object-center my-4" src="{{URL("vendor\adminlte\dist\img\Afoto-no-disponiblle.jpg")}}" alt="">
                                         @endif
                                     </a>
                                 </div>

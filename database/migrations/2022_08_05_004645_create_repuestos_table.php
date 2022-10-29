@@ -21,7 +21,6 @@ return new class extends Migration
             $table->text("description");
             $table->string("stock");
             $table->string("price");
-            // $table->string('url');
 
             $table->unsignedBigInteger("marca_id");
             $table->unsignedBigInteger("modelo_id");

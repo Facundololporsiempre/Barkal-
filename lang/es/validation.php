@@ -167,5 +167,4 @@ return [
         "numberT" => "numero de tarjeta",
         "codeS" => "codigo de seguridad"
     ],
-
 ];

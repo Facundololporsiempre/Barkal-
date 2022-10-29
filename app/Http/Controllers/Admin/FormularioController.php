@@ -18,6 +18,7 @@ class FormularioController extends Controller
     {
         $this->middleware("can:formulario.formularios.index")->only("index");
         $this->middleware("can:formulario.formularios.edit")->only("edit");
+        // $this->middleware("can:formulario.formularios.destroy")->only("destroy");
     }
     public function index()
     {
@@ -100,6 +101,7 @@ class FormularioController extends Controller
      */
     public function destroy(Compra $formulario)
     {
-        //
+        $formulario->delete();
+        return redirect()->route("formulario.formularios.index")->with("info", "El formulario de compras se elimino con exito");
     }
 }

@@ -45,7 +45,7 @@ class RepuestoController extends Controller
     }
     public function store(Request $request){
         $request->validate([
-            "name" => "required|string|between:5,25",
+            "name" => "required|string|between:5,25|regex:/^[\pL\s\-]+$/u",
             "phone" => "max:10",
             "email" => "required|between:5,40|email:rfc,dns",
             "query" => "required|min:10",

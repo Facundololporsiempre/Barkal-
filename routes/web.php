@@ -16,7 +16,6 @@ Route::get('repuesto/{repuesto}', [RepuestoController::class, "show"])->name("re
 
 // Session Repuesto
 Route::get('seccion/repuestos', [RepuestoController::class, "repuestos"])->name("repuestos.repuesto");
-// Route::get('repuesto', [RepuestoController::class, "repuesto"])->name("repuestos.repuesto");
 
 // Session formulario
 Route::get('sesion/formulario/{repuesto}', [RepuestoController::class, "formulario"])->name("repuestos.formulario");

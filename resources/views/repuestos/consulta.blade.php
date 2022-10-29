@@ -37,6 +37,9 @@
                     <div class="flex justify-center">
                         {!! Form::number("phone", null, ["class" => "w-96 rounded-full text-center", "placeholder" => "Ingrese su numero telefonico"]) !!}
                     </div>
+                    <div class="flex justify-center">
+                        <small class="text-zinc-400 flex justify-center">Sin punto ni espacios. Ej. 3794026317</small>
+                    </div>
                     @error('phone')
                         <small class="text-red-600 flex justify-center">{{$message}}</small>
                     @enderror
@@ -65,7 +68,7 @@
                             {!! Form::submit("Enviar consulta", ["class" => "bg-blue-700 w-40 text-white hover:bg-blue-600 hover:text-zinc-200 px-3 py-2 rounded-full font-bold cursor-pointer"]) !!}
                         </div>
                         <div class="col-span-2 flex justify-end pb-3">
-                            <a href="{{route("repuestos.consultaP")}}" class="underline text-gray-900 hover:text-blue-600 text-sm">Ver consultas hechas por otras personas</a>
+                            <a href="{{route("repuestos.consultaP")}}" class="underline text-gray-900 hover:text-blue-600 text-sm">Ver consultas hechas por otros usuarios</a>
                         </div>
                     </div>
                 {!! Form::close() !!}

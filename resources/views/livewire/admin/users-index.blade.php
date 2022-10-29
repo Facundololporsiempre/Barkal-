@@ -25,6 +25,13 @@
                                     <a class="btn btn-primary" href="{{route("admin.users.edit", $user)}}">Editar</a>
                                 @endcan
                                 </td>
+                                {{-- <td width="10px">
+                                    <form action="{{route("admin.users.destroy", $user)}}" method="post">
+                                    @csrf
+                                    @method("delete")
+                                    <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+                                    </form>
+                                </td> --}}
                             </tr>
                         @endforeach
                     </tbody>

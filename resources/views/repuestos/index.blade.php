@@ -9,13 +9,13 @@
             @foreach ($repuestos as $repuesto)
                 <article class="w-56 h-60 bg-contain bg-no-repeat bg-center my-8 mb-28 border" style="background-image: url(@if ($repuesto->image) {{Storage::url($repuesto->image->url)}} @else https://tekoha.com.ar/wp-content/uploads/2020/12/AUDI-10.jpg @endif)">
                     <div class="w-full px-4 py-2 flex flex-col justify-center hover:shadow-zinc-400 bg-white shadow-lg overflow-hidden relative top-60 border">
-                        @if ($repuesto->price == "5.000" || $repuesto->price == "6.000" || $repuesto->price == "8.000" || $repuesto->price == "10.000" || $repuesto->price == "12.000" || $repuesto->price == "13.000" || $repuesto->price == "16.000" ||  $repuesto->price == "18.000" || $repuesto->price == "21.000")
+                        @if ($repuesto->price == "21.000" || $repuesto->price == "22.000" || $repuesto->price == "24.000" || $repuesto->price == "25.000" ||  $repuesto->price == "26.000" || $repuesto->price == "27.000" || $repuesto->price == "28.000" || $repuesto->price == "29.000" || $repuesto->price == "30.000" || $repuesto->price == "33.000" || $repuesto->price == "37.000" || $repuesto->price == "43.000" || $repuesto->price == "45.000" || $repuesto->price == "50.000" || $repuesto->price == "51.000" || $repuesto->price == "54.000" || $repuesto->price == "61.000" || $repuesto->price == "64.000" || $repuesto->price == "67.000")
                         <p class="text-gray-400 line-through mb-1">
                             {{-- <a href="{{route("repuestos.show", $repuesto)}}">
                                 ${{$repuesto->price}}
                             </a> --}}
                             @php
-                                $priceO = $repuesto->price + 2.500;
+                                $priceO = $repuesto->price + 9.500;
                                 $resta = $priceO;
                                 echo("$" . $resta . "00");
                             @endphp
@@ -23,7 +23,7 @@
                         <p class="text-gray-900 text-2xl leading-4 font-bold">
                             <a href="{{route("repuestos.show", $repuesto)}}"> 
                                 ${{$repuesto->price}}
-                                <span class="text-base text-blue-500 ml-2">25%off</span>
+                                <span class="text-base text-blue-500 ml-2">13%off</span>
                             </a>
                         </p>
                         @else
