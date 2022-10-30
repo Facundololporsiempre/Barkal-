@@ -13,4 +13,10 @@ class Cliente extends Model
     {
         return $this->belongsTo(Venta::class);
     }
+
+    // relacion uno aa uno
+    public function cliente()
+    {
+        return $this->hasOne(Cliente::class);
+    }
 }

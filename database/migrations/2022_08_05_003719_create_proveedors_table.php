@@ -17,8 +17,12 @@ return new class extends Migration
             $table->id();
 
             $table->string("name");
+            $table->string("surname");
+            $table->string("dni");
+            $table->string("phone");
             $table->string("email");
             $table->string("password");
+            $table->string("direction");
 
             $table->timestamps();
         });

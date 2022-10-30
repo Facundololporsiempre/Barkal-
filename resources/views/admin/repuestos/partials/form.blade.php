@@ -80,7 +80,7 @@
                 <span class="text-danger">{{$message}}</span>
             @enderror
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum iste ab earum quam enim eligendi quia incidunt? Vitae aliquid hic laboriosam maiores ab perferendis architecto natus vel. Pariatur, rerum?</p>
+        {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum iste ab earum quam enim eligendi quia incidunt? Vitae aliquid hic laboriosam maiores ab perferendis architecto natus vel. Pariatur, rerum?</p> --}}
     </div>
 </div>
 

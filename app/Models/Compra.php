@@ -15,4 +15,10 @@ class Compra extends Model
     {
         return $this->belongsToMany(Repuesto::class);
     }
+    
+    // relacion uno aa uno
+    public function proveedor()
+    {
+        return $this->hasOne(Proveedor::class);
+    }
 }

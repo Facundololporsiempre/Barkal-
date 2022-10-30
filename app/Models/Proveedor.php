@@ -13,4 +13,10 @@ class Proveedor extends Model
     {
         return $this->belongsToMany(Repuesto::class);
     }
+
+    // relacion uno aa uno
+    public function compra()
+    {
+        return $this->hasOne(Compra::class);
+    }
 }

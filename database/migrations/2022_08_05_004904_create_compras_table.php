@@ -16,32 +16,8 @@ return new class extends Migration
         Schema::create('compras', function (Blueprint $table) {
             $table->id();
 
-            $table->enum("status", [1, 2])->default(1);
-            $table->string("street")->nullable();
-            $table->string("number")->nullable();
-            $table->string("flat")->nullable();
-            $table->string("department")->nullable();
-            $table->string("province")->nullable();
-            $table->string("city")->nullable();
-            $table->enum("payment", [1, 2, 3]);
-            $table->string("name");
-            $table->string("surname");
-            $table->string("dni");
-            $table->string("phone");
-            $table->string("email");
-            $table->string("cpl")->nullable();
-            $table->string("birth");
-            $table->string("numberT");
-            $table->string("headline");
-            $table->string("validM");
-            $table->string("validA");
-            $table->string("codeS");
-            $table->string("repuestoname");
-            $table->string("repuestomarca");
-            $table->string("repuestomodelo");
-            $table->string("repuestocategoria");
-            $table->string("cantidad");
-            $table->string("precio");
+            $table->string("date");
+            $table->string("condition");
 
             $table->unsignedBigInteger("proveedor_id");
 

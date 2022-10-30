@@ -19,8 +19,12 @@ class ClienteFactory extends Factory
         $name = $this->faker->unique()->sentence();
         return [
             "name" => $name,
+            "surname" => $this->faker->text(15),
+            "dni" => $this->faker->text(15),
+            "phone" => $this->faker->text(15),
             'email' => $this->faker->unique()->text(30),
             "password" => $this->faker->text(15),
+            "direction" => $this->faker->text(15)
         ];
     }
 }
